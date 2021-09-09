@@ -8,11 +8,19 @@
  * 
 */
 
-function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+function sumOfTwo(arr, num) {
+    let result = false;
+    arr.forEach(function(elem){
+        for(let i = 0; i < arr.length; i++){
+            if(elem + arr[i] == num){
+                result = true;
+            }
+        }
+    });
+    return result
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(sumOfTwo([1, 2, 3, 4, 5], 4)); // true (так как 1 + 3 === 4)
+console.log(sumOfTwo([1, 2, 3], 4)); // true (так как 1 + 3 === 4)
 console.log(sumOfTwo([1, 2, 3, 4, 5], 100)); // false

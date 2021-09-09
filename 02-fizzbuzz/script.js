@@ -11,9 +11,23 @@
 */
 
 function fizzBuzz(num) {
-    // Напишите код здесь
+    const arr = [];
+    for(let i = 0; i < num; i++){
+        arr[i] = i + 1
+    };
+    arr.forEach(function(digit, index, array){
+        if(!(Number.parseInt(digit) % 5) && !(Number.parseInt(digit) % 3)){
+            array[index] = 'fizzbuzz'
+        }else if(!(Number.parseInt(digit) % 5)){
+            array[index] = 'buzz'
+        }else if(!(Number.parseInt(digit) % 3)){
+            array[index] = 'fizz'
+        }
+        console.log(arr[index])
+    });
+    
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(fizzBuzz(15));
+fizzBuzz(30);
