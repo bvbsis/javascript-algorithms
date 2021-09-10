@@ -10,9 +10,9 @@
 
 function sumOfTwo(arr, num) {
     let result = false;
-    arr.forEach(function(elem){
+    arr.forEach(function(elem, index){
         for(let i = 0; i < arr.length; i++){
-            if(elem + arr[i] == num){
+            if(elem + arr[i] == num && index != i){
                 result = true;
             }
         }
@@ -22,5 +22,5 @@ function sumOfTwo(arr, num) {
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(sumOfTwo([1, 2, 3], 4)); // true (так как 1 + 3 === 4)
+console.log(sumOfTwo([2, 7], 4)); // true (так как 1 + 3 === 4)
 console.log(sumOfTwo([1, 2, 3, 4, 5], 100)); // false

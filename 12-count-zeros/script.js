@@ -10,14 +10,14 @@ function countZeros(n) {
     if(!n){
         return 0
     };
-    let arr = [n];
+    const arr = [n];
     for (let i = n - 1; i > 0; i--){
         arr.unshift(i)
     };
     let a = 0;
     arr.forEach(function(elem){
         elem = String(elem);
-        arrOfElem = elem.split('');
+        const arrOfElem = elem.split('');
         arrOfElem.forEach(function(elem){
             if(elem == 0){
                 a++

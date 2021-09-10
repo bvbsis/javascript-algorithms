@@ -8,13 +8,13 @@
 
 function capitalize(str) {
     
-    arr = str.split(' ');
+    const arr = str.split(' ');
     
     arr.forEach(function(elem, index, array){
         if(!elem){
             return
         }
-        newArr = elem.split('');
+        const newArr = elem.split('');
         newArr[0] = newArr[0].toUpperCase();
         arr[index] = newArr.join('')
     });

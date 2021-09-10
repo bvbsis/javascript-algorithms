@@ -16,12 +16,9 @@
 function palindrome(str) {
   str = str.replace(/[.,?! ]/g, "");
   str = str.toLowerCase();
-  arr = str.split("").reverse();
+  const arr = str.split("").reverse();
   const newStr = arr.join("");
-  if (str === newStr) {
-    return true;
-  }
-  return false;
+    return str === newStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -12,11 +12,11 @@
 const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 
 function findVowels(str) {
-    a = 0;
+    let a = 0;
     str = str.toLowerCase();
     vowels.forEach(function(e, i, arr){
         if(str.includes(e)){
-            a += 1;
+            a++;
         }
         
     });
